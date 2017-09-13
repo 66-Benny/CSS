@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .q1 {
+        width: 100%;
+        height: 300px;
+        background: #00CCFF;
+    }
+    
+    .q2 {
+        width: 100%;
+        height: 300px;
+        background-image: url(2016emp_cogitive_abstract_bg_2324x500.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: right center;
+    }
+    
+    .q2 div {
+        display: block;
+    }
+    
+    .q3 {
+        width: 100%;
+        height: 300px;
+        background-image: url(https://cdn.pixabay.com/photo/2017/02/20/23/17/colorful-background-2084178_960_720.jpg);
+        height: 100%;
+        -webkit-background-clip: text;
+        background-attachment: fixed;
+    }
+    
+    .q3>p,
+    .q3>h2,
+    .q3>h1 {
+        color: transparent;
+        font-weight: bold;
+    }
+    
+    .q4 {
+        width: 100%;
+        height: 100%;
+        background: #FF9;
+    }
+    
+    .change_image {
+        width: 600px;
+        height: 400px;
+        border: 2px solid;
+        margin: 20px auto;
+        position: relative;
+    }
+    
+    .change_image>div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: 600px 400px;
+    }
+    
+    .change_image_a {
+        background-image: url(1.jpg);
+        background-size: 600px 400px;
+    }
+    
+    .change_image_b {
+        background-image: url(2.jpg);
+        background-size: 600px 400px;
+        border: 1px solid;
+    }
+    
+    .web_heart_img {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        background-image: url(web_heart_animation.png);
+        height: 70px;
+        width: 70px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+    }
+    
+    #web_heart:checked + label > .web_heart_img {
+        background-position: right;
+        transition: background-position 2s steps(28, start);
+    }
+    
+    .q5 {
+        width: 100%;
+        height: 900px;
+        background-image: url(3.jpg);
+        background-attachment: fixed;
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
+    
+    .q5 div {
+        background-image: url(4.jpg);
+        background-attachment: fixed;
+        background-size: auto;
+        background-repeat: no-repeat;
+        border: 2px solid red;
+        position: relative;
+        top: 20%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    
+    .q6 {
+        width: 100%;
+        height: 300px;
+        background: #ef5b9c;
+    }
+    
+    .q7 {
+        width: 100%;
+        height: 300px;
+        background: #a3cf62;
+    }
+    
+    .q8 {
+        width: 100%;
+        background: #8552a1;
+        text-align: center;
+        -webkit-background-clip: text;
+        background-image: url(QQ图片20170411144508.png);
+        background-position: 0 0;
+        -webkit-animation: gogogo .2s infinite linear;
+        background-color: #eee;
+        position: relative;
+        z-index: 99;
+    }
+    
+    @-webkit-keyframes gogogo {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: right;
+        }
+    }
+    
+    .q8_abs {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        opacity: 0.2;
+    }
+    
+    .q8 h1 {
+        color: transparent;
+        font-size: 4em;
+        z-index: 99;
+    }
+    
+    .q9 {
+        width: 100%;
+        height: 300px;
+        background: #33a3dc;
+    }
+    
+    .fixed_div {
+        height: 300px;
+        position: absolute;
+        width: 100%;
+        clip: rect(0, auto, auto, 0);
+    }
+    
+    .fixed_div::before {
+        content: 'Contact with me';
+        position: fixed;
+        right: 0;
+        top: 100px;
+        cursor: pointer;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    
+    .fixed_div1 {
+        color: #f15a22;
+        background-color: #ffd400;
+    }
+    
+    .fixed_div2 {
+        color: #009ad6;
+        background-color: #563624;
+        top: 300px;
+    }
+    
+    .fixed_div3 {
+        color: #fffef9;
+        background-color: #00ae9d;
+        top: 600px;
+    }
+    
+    .fixed_div4 {
+        color: #0c212b;
+        background-color: #b2d235;
+        top: 900px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="fixed_div1 fixed_div">
+    </div>
+    <div class="fixed_div2 fixed_div">
+    </div>
+    <div class="fixed_div3 fixed_div">
+    </div>
+    <div class="fixed_div4 fixed_div">
+    </div>
+    <div class="q1">
+        <h1>Online kalkulačka</h1>
+        <h3>Vyskúšajte náš online nástroj a získajte odhad výšky mesačných splátok </h3>
+    </div>
+    <div class="q2">
+        <div>
+            <h1>Online kalkulačka</h1>
+            <h3>Vyskúšajte náš online nástroj a získajte odhad výšky mesačných splátok </h3>
+        </div>
+    </div>
+    <div class="q6">
+        <h1>Online kalkulačka</h1>
+        <h3>Vyskúšajte náš online nástroj a získajte odhad výšky mesačných splátok </h3>
+    </div>
+    <div class="q4">
+        <div class="change_image">
+            <div class="change_image_a"></div>
+            <div class="change_image_b"></div>
+        </div>
+        <br/>
+        <center>
+            <input type="range" name="range" max="100" min="0" step="1" value="100" id="change_button"> <span id="change_button_value">100%</span>
+            <input type="checkbox" id="web_heart">
+            <label for="web_heart">
+                <div class="web_heart_img"></div>
+            </label>
+        </center>
+    </div>
+    <div class="q7">
+        <h1>Online kalkulačka</h1>
+        <h3>Vyskúšajte náš online nástroj a získajte odhad výšky mesačných splátok </h3>
+    </div>
+    <div class="q3">
+        <h1>Online kalkulačka</h1>
+        <h2>Vyskúšajte náš online nástroj a získajte odhad výšky mesačných splátok </h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla labore id rerum animi corporis eum reprehenderit sapiente sed impedit aperiam alias praesentium, quia vitae, delectus, ex libero tempore non aliquam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla labore id rerum animi corporis eum reprehenderit sapiente sed impedit aperiam alias praesentium, quia vitae, delectus, ex libero tempore non aliquam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla labore id rerum animi corporis eum reprehenderit sapiente sed impedit aperiam alias praesentium, quia vitae, delectus, ex libero tempore non aliquam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla labore id rerum animi corporis eum reprehenderit sapiente sed impedit aperiam alias praesentium, quia vitae, delectus, ex libero tempore non aliquam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla labore id rerum animi corporis eum reprehenderit sapiente sed impedit aperiam alias praesentium, quia vitae, delectus, ex libero tempore non aliquam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla labore id rerum animi corporis eum reprehenderit sapiente sed impedit aperiam alias praesentium, quia vitae, delectus, ex libero tempore non aliquam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla labore id rerum animi corporis eum reprehenderit sapiente sed impedit aperiam alias praesentium, quia vitae, delectus, ex libero tempore non aliquam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla labore id rerum animi corporis eum reprehenderit sapiente sed impedit aperiam alias praesentium, quia vitae, delectus, ex libero tempore non aliquam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla labore id rerum animi corporis eum reprehenderit sapiente sed impedit aperiam alias praesentium, quia vitae, delectus, ex libero tempore non aliquam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla labore id rerum animi corporis eum reprehenderit sapiente sed impedit aperiam alias praesentium, quia vitae, delectus, ex libero tempore non aliquam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla labore id rerum animi corporis eum reprehenderit sapiente sed impedit aperiam alias praesentium, quia vitae, delectus, ex libero tempore non aliquam.</p>
+    </div>
+    <div class="q8">
+        <div class="q8_abs"></div>
+        <h1>Online kalkulačkaVyskúšajte náš online nástroj a získajte odhad výšky mesačných splátok</h1>
+        <h1>Online kalkulačka</h1>
+    </div>
+    <div class="q9">
+        <h1>Online kalkulačka</h1>
+        <h3>Vyskúšajte náš online nástroj a získajte odhad výšky mesačných splátok </h3>
+    </div>
+    <div class="q5">
+        <div>
+            <h1>Online kalkulačka</h1>
+            <h2>Vyskúšajte náš online nástroj a získajte odhad výšky mesačných splátok </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla labore id rerum animi corporis eum reprehenderit sapiente sed impedit aperiam alias praesentium, quia vitae, delectus, ex libero tempore non aliquam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla labore id rerum animi corporis eum reprehenderit sapiente sed impedit aperiam alias praesentium, quia vitae, delectus, ex libero tempore non aliquam.</p>
+            <h1>Online kalkulačka</h1>
+            <h2>Vyskúšajte náš online nástroj a získajte odhad výšky mesačných splátok </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla labore id rerum animi corporis eum reprehenderit sapiente sed impedit aperiam alias praesentium, quia vitae, delectus, ex libero tempore non aliquam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla labore id rerum animi corporis eum reprehenderit sapiente sed impedit aperiam alias praesentium, quia vitae, delectus, ex libero tempore non aliquam.</p>
+            <h1>Online kalkulačka</h1>
+            <h2>Vyskúšajte náš online nástroj a získajte odhad výšky mesačných splátok </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla labore id rerum animi corporis eum reprehenderit sapiente sed impedit aperiam alias praesentium, quia vitae, delectus, ex libero tempore non aliquam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla labore id rerum animi corporis eum reprehenderit sapiente sed impedit aperiam alias praesentium, quia vitae, delectus, ex libero tempore non aliquam.</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+    var change_button = document.getElementById('change_button');
+    var change_button_value = document.getElementById('change_button_value');
+    var change_image_b = document.getElementsByClassName('change_image_b')[0];
+    change_button.onmousemove = function() {
+        change_image_b.style.width = change_button_value.innerHTML = change_button.value + '%';
+    }
+    </script>
+</body>
+
+</html>

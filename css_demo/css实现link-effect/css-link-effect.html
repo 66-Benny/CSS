@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Link Effects</title>
+    <style type="text/css">
+    span {
+        font-size: 2em;
+        margin: 0 0.8em;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    a {
+        padding: 0 15px;
+        overflow: hidden;
+        display: inline-block;
+        top: 50%;
+        transform: translateY(-50%);
+        position: relative;
+    }
+    
+    .part1 {
+        height: 300px;
+        width: 100%;
+        background-color: #f15b6c;
+        text-align: center;
+    }
+    
+    .part1 a span {
+        transform: translateY(0%);
+        transition: all 0.2s linear;
+    }
+    
+    .part1 a span::before {
+        position: absolute;
+        transform: translateY(150%);
+        content: attr(date-title);
+        text-shadow: 3px 3px 3px #fff;
+        color: #000;
+        font-weight: bold;
+        text-decoration: underline;
+        text-decoration-style: double;
+    }
+    
+    .part1 a:hover span {
+        transform: translateY(-150%);
+    }
+    
+    .part2 {
+        height: 300px;
+        width: 100%;
+        background-color: #9b95c9;
+        text-align: center;
+    }
+    
+    .part2 a {
+        padding: 10px;
+    }
+    
+    .part2 a span {
+        margin: 0 0.2em;
+        padding: 5px 10px;
+        border: 2px solid #000;
+        transition: all 0.2s linear;
+    }
+    
+    .part2 a:hover span {
+        margin: 0 0.2em;
+        padding: 5px 10px;
+        border: 2px solid #fff;
+        text-shadow: 3px 3px 3px #000;
+        box-shadow: -6px 6px 6px 6px #000;
+        transform: translateY(-5px) translateX(5px);
+    }
+    
+    .part3 {
+        height: 300px;
+        width: 100%;
+        background-color: #fcaf17;
+        text-align: center;
+    }
+    
+    .part3 a span {
+        overflow: hidden;
+        color: #000;
+        border-top: 2px solid;
+        border-color: #000;
+        transition: all 0.8s ease-in-out;
+        -webkit-transform: all 0.8s ease-in-out;
+    }
+    
+    .part3 a:hover span {
+        color: #000;
+        border-top: 2px solid;
+        border-color: #fff;
+    }
+    
+    .part3 a span::before {
+        overflow: hidden;
+        border-top: 2px solid;
+        border-color: #fff;
+        content: attr(date-title);
+        max-width: 0%;
+        position: absolute;
+        transition: all 0.8s ease-in-out;
+        -webkit-transform: all 0.8s ease-in-out;
+    }
+    
+    .part3 a:hover span::before {
+        content: attr(date-title);
+        max-width: 100%;
+        color: #fff;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="part1">
+        <a href="#"><span date-title="SERAGLIO">SERAGLIO</span></a>
+        <a href="#"><span date-title="SUMPTUOUS">SUMPTUOUS</span></a>
+        <a href="#"><span date-title="SCINTILLA">SCINTILLA</span></a>
+        <a href="#"><span date-title="PALIMPSEST">PALIMPSEST</span></a>
+        <a href="#"><span date-title="ASSEMBLAGE">ASSEMBLAGE</span></a>
+    </div>
+    <div class="part2">
+        <a href="#"><span>SERAGLIO</span></a>
+        <a href="#"><span>SUMPTUOUS</span></a>
+        <a href="#"><span>SCINTILLA</span></a>
+        <a href="#"><span>PALIMPSEST</span></a>
+        <a href="#"><span>ASSEMBLAGE</span></a></div>
+    <div class="part3">
+        <a href="#"><span date-title="SERAGLIO">SERAGLIO</span></a>
+        <a href="#"><span date-title="SUMPTUOUS">SUMPTUOUS</span></a>
+        <a href="#"><span date-title="SCINTILLA">SCINTILLA</span></a>
+        <a href="#"><span date-title="PALIMPSEST">PALIMPSEST</span></a>
+        <a href="#"><span date-title="ASSEMBLAGE">ASSEMBLAGE</span></a>
+    </div>
+</body>
+
+</html>

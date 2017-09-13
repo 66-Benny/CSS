@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html body {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        .layout {
+            width: 100%;
+        }
+
+        .layout div {
+            min-height: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 这是三栏布局的Float -->
+    <section>
+        <style>
+            .layout.float .left {
+                float: left;
+                width: 300px;
+                background: #f15b6c;
+            }
+
+            .layout.float .right {
+                float: right;
+                width: 300px;
+                background: #00ae9d;
+            }
+
+            .layout.float .center {
+                background: #694d9f;
+            }
+        </style>
+        <article class="layout float">
+            <div class="left">
+                <p>优点：</p>
+                简洁。高效
+            </div>
+
+            <div class="right">
+                <h1>这是三栏布局的 Float</h1>
+            </div>
+            <div class="center">
+                <p>缺点：</p>
+                <p>1.当增加任何一栏的高度，其他两栏不会跟随自动增高<br/>2.当中间主体内容超出限定高度时，会占用左右两栏</p>
+            </div>
+        </article>
+    </section>
+    <!-- 这是三栏布局的Absolute -->
+    <section>
+        <style>
+            .layout.absolute div {
+                position: absolute
+            }
+
+            .layout.absolute .left {
+                left: 0px;
+                width: 300px;
+                background: #f15b6c;
+            }
+
+            .layout.absolute .right {
+                right: 0px;
+                width: 300px;
+                background: #00ae9d;
+            }
+
+            .layout.absolute .center {
+                background: #694d9f;
+                left: 300px;
+                right: 300px;
+            }
+        </style>
+        <article class="layout absolute">
+            <div class="left">
+                <p>优点：</p>快捷</div>
+            <div class="center">
+                <p>缺点：</p>1.脱离文档流，增加任何一栏高度，其他两栏不会自动增高 <br>2.当浏览器宽度小到一定程度，会发生层重叠的情况</div>
+
+            </div>
+            <div class="right">
+                <h1>这是三栏布局的 Absolute</h1>
+        </article>
+    </section>
+    <!-- 这是三栏布局的 table -->
+    <section>
+        <style>
+            .layout.table {
+                display: table;
+                margin-bottom: 20px;
+                margin-top: 140px;
+            }
+
+            .layout.table div {
+                display: table-cell;
+            }
+
+            .layout.table .left {
+                width: 300px;
+                background: #f15b6c;
+            }
+
+            .layout.table .right {
+                width: 300px;
+                background: #00ae9d;
+            }
+
+            .layout.table .center {
+                background: #694d9f;
+                width: auto;
+            }
+        </style>
+        <article class="layout table">
+            <div class="left">
+                <p>优点：</p>兼容性好，其中一栏增高，其他两栏跟随增高</div>
+            <div class="center">
+
+            </div>
+            <div class="right">
+                <h1>这是三栏布局的 Table</h1>
+            </div>
+        </article>
+    </section>
+    <!-- 这是三栏布局的 Flex -->
+    <section>
+        <style>
+            .layout.flex {
+                display: flex;
+            }
+
+            .layout.flex .left {
+                width: 300px;
+                background: #f15b6c;
+            }
+
+            .layout.flex .right {
+                width: 300px;
+                background: #00ae9d;
+            }
+
+            .layout.flex .center {
+                background: #694d9f;
+                flex: 1;
+            }
+        </style>
+        <article class="layout flex">
+            <div class="left">
+                <p>优点：</p>完美，增加任何一栏高度，其他两栏都会跟随变化</div>
+            <div class="center">
+                <p>缺点：</p>
+                1.需 IE10 以上才支持
+            </div>
+            <div class="right">
+                <h1>这是三栏布局的 Flex</h1>
+            </div>
+        </article>
+    </section>
+
+    <!-- 这是三栏布局的 grid -->
+    <section>
+        <style>
+            .layout.grid {
+                display: grid;
+                width: 100%;
+                grid-template-columns: 300px auto 300px;
+            }
+
+            .layout.grid .left {
+                background: #f15b6c;
+            }
+
+            .layout.grid .right {
+                background: #00ae9d;
+            }
+
+            .layout.grid .center {
+                background: #694d9f;
+            }
+        </style>
+        <article class="layout grid">
+            <div class="left">
+                <p>优点：</p>完美，增加任何一栏高度，其他两栏都会跟随变化</div>
+            <div class="center">
+            </div>
+            <div class="right">
+                <h1>这是三栏布局的 Grid</h1>
+            </div>
+        </article>
+    </section>
+</body>
+
+</html>

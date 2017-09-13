@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tooltips</title>
+    <style type="text/css">
+    body {
+        margin: 0;
+        min-height: 100vh;
+        background: #ffd748;
+        color: #20194a;
+        font-family: 'Roboto Slab', sans-serif;
+        padding-top: 6rem;
+    }
+    
+    section {
+        margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+    
+    .tooltips {
+        padding: 5px 10px;
+        margin: 5px;
+        background-color: #ff3d2e;
+        color: #fff;
+        border-radius: 7px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 1.4em;
+        position: relative;
+        z-index: 1;
+    }
+    
+    #tooltips_up::before {
+        content: attr(date-tooltip);
+        /*  获取tooltip的内容 */
+        position: absolute;
+        top: 0px;
+        opacity: 0;
+        color: #fff;
+        background-color: #000;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 0.6em;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: normal;
+        width: 100%;
+        visibility: hidden;
+        transition-delay: 0.7s;
+        /* 延时消失0.7秒 */
+    }
+    
+    #tooltips_up:hover::before {
+        top: -40px;
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0s;
+        transition: all 0.35s linear;
+    }
+    
+    #tooltips_up::after {
+        width: 0px;
+        height: 0px;
+        border: 8px solid;
+        border-color: #000 transparent transparent transparent;
+        content: "";
+        position: absolute;
+        opacity: 0;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        visibility: hidden;
+        transition-delay: 0.7s;
+    }
+    
+    #tooltips_up:hover::after {
+        width: 0px;
+        height: 0px;
+        border: 8px solid;
+        border-color: #000 transparent transparent transparent;
+        content: "";
+        position: absolute;
+        opacity: 1;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: -40%;
+        bottom: 0;
+        visibility: visible;
+        transition-delay: 0s;
+        transition: all 0.35s linear;
+    }
+    /* =================== */
+    
+    #tooltips_right::before {
+        content: attr(date-tooltip);
+        position: absolute;
+        opacity: 0;
+        color: #fff;
+        background-color: #000;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 0.6em;
+        left: 100%;
+        top: 50%;
+        white-space: normal;
+        transform: translateY(-50%);
+        width: 100%;
+        visibility: hidden;
+        transition-delay: 0.7s;
+    }
+    
+    #tooltips_right:hover::before {
+        left: 120%;
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0s;
+        transition: all 0.35s linear;
+    }
+    
+    #tooltips_right::after {
+        width: 0px;
+        height: 0px;
+        border: 8px solid;
+        border-color: transparent #000 transparent transparent;
+        content: "";
+        position: absolute;
+        opacity: 0;
+        margin: auto 0;
+        left: 95%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        visibility: hidden;
+        transition-delay: 0.7s;
+    }
+    
+    #tooltips_right:hover::after {
+        left: 106%;
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0s;
+        transition: all 0.35s linear;
+    }
+    </style>
+</head>
+
+<body>
+    <section>
+        <button date-tooltip="Hello world!" id="tooltips_up" class="tooltips">Hello world!</button>
+        <button date-tooltip="I'm Fine!" id="tooltips_right" class="tooltips">I'm Fine!</button>
+    </section>
+</body>
+
+</html>
